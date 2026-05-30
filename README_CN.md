@@ -4,13 +4,17 @@
 </h1>
 
 <p align="center">
+  中文 | <a href="README.md">English</a>
+</p>
+
+<p align="center">
   <em>"看到题目 → 识别模式 → 应用方法 → 得到答案"</em>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
   <img src="https://img.shields.io/badge/AgentSkills-Standard-green.svg" alt="Agent Skills Standard" />
-  <a href="https://github.com/AtomerCore/Exam2Knowledge/stargazers"><img src="https://img.shields.io/github/stars/AtomerCore/Exam2Knowledge.svg?style=flat&label=Stars" alt="Stars" /></a>
+  <a href="https://github.com/AtomerCore/Exam2Knowledge-skill/stargazers"><img src="https://img.shields.io/github/stars/AtomerCore/Exam2Knowledge-skill.svg?style=flat&label=Stars" alt="Stars" /></a>
 </p>
 
 ---
@@ -24,7 +28,7 @@
 ## 🚀 快速开始
 
 ```bash
-git clone https://github.com/AtomerCore/Exam2Knowledge.git
+git clone https://github.com/AtomerCore/Exam2Knowledge-skill.git
 ```
 
 ```
