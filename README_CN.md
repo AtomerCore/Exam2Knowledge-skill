@@ -27,17 +27,7 @@
 
 **适用场景：** 往年试卷、练习题、课件资料 → 高频考点提炼 → 战略性复习计划
 
-## 🚀 快速开始
 
-```bash
-git clone https://github.com/AtomerCore/Exam2Knowledge-skill.git
-```
-
-```
-/Exam2Knowledge [粘贴题目或试卷]
-```
-
-> 适用于任何支持 [Agent Skills 标准](https://agentskills.io/) 的 AI Agent —— GitHub Copilot、Claude Code、Cursor 等
 
 ## 📁 项目结构
 

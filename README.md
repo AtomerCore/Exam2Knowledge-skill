@@ -27,17 +27,7 @@ Transforms exam questions into **structured, exam-focused knowledge systems**. N
 
 **Perfect for:** Past exam papers, practice questions, course materials → High-frequency test points → Strategic study plan
 
-## 🚀 Quick Start
 
-```bash
-git clone https://github.com/AtomerCore/Exam2Knowledge-skill.git
-```
-
-```
-/Exam2Knowledge [paste your question or exam paper]
-```
-
-> Works with any AI agent supporting the [Agent Skills standard](https://agentskills.io/) — GitHub Copilot, Claude Code, Cursor, etc.
 
 ## 📁 Structure
 
