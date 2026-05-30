@@ -18,6 +18,8 @@
 </p>
 
 ---
+Note: The current version of SKill will consume a large number of Tokens. Please use it with caution!
+---
 
 ## ✨ What It Does
 
