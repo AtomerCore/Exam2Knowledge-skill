@@ -18,8 +18,6 @@
 </p>
 
 ---
-Note: The current version of SKill will consume a large number of Tokens. Please use it with caution!
----
 
 ## ✨ What It Does
 
@@ -27,28 +25,35 @@ Transforms exam questions into **structured, exam-focused knowledge systems**. N
 
 **Perfect for:** Past exam papers, practice questions, course materials → High-frequency test points → Strategic study plan
 
-
-
 ## 📁 Structure
 
 ```
 .agents/skills/Exam2Knowledge/
-├── SKILL.md              # Core definition
+├── SKILL.md              # Core definition (~135 words)
 ├── assets/
-│   └── output-template.md
+│   └── output-template.md   # Template structure (~95 words)
 └── references/
-    ├── blooms-taxonomy.md
-    └── diagnostic-rubric.md
+    ├── blooms-taxonomy.md    # Cognitive levels (~180 words)
+    └── diagnostic-rubric.md  # Error categories (~190 words)
 ```
 
 ## ⚙️ How It Works
 
-1. **Pattern Recognition** — Identify question type & hidden intent
-2. **Reverse Engineering** — Extract knowledge from questions
-3. **Reflex Frameworks** — Build universal solution templates
-4. **Error Pattern Library** — Catalog common mistakes
-5. **Cross-Question Intelligence** — Identify high-frequency patterns ⭐
-6. **Exam-Ready Output** — Prioritized action framework ⭐
+1. **Pattern Recognition** — Identify question type & cognitive level ([Bloom's Taxonomy](.agents/skills/Exam2Knowledge/references/blooms-taxonomy.md))
+2. **Reverse Engineering** — Extract & rank knowledge points ([***] Must-Master to [*] Optional)
+3. **Reflex Frameworks** — Build universal solution templates (80%+ coverage)
+4. **Error Pattern Library** — Catalog mistakes by category ([Diagnostic Rubric](.agents/skills/Exam2Knowledge/references/diagnostic-rubric.md))
+5. **Cross-Question Intelligence** — Frequency ranking + clusters + trends (batch mode)
+6. **Exam-Ready Output** — Prioritized action framework ([Output Template](.agents/skills/Exam2Knowledge/assets/output-template.md))
+
+## 🎯 Decision Rules
+
+| Scenario | Action |
+|----------|--------|
+| Single question | Full analysis + solution template |
+| Multiple questions | Add frequency ranking + trends |
+| Time pressure (<2 weeks) | Focus on [***] Must-Master only |
+| Weak topic | Target specific error patterns |
 
 ## 📥 Supported Input
 
@@ -61,7 +66,3 @@ Transforms exam questions into **structured, exam-focused knowledge systems**. N
 [MIT](LICENSE)
 
 ---
-
-<p align="center">
-  <sub>Built with ❤️ for students everywhere</sub>
-</p>
