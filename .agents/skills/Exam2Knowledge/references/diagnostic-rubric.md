@@ -1,54 +1,60 @@
-﻿# Error Diagnostic Rubric
+# Error Diagnostic Rubric
 
-5-category mistake classification system.
+5-category mistake classification. Use to catalog and prevent recurring errors.
 
 ## Contents
 
-1. [Ranking](#ranking) 2. [Categories](#categories) 3. [Flowchart](#flowchart) 4. [Profiles](#profiles)
+1. [Quick Picker](#quick-picker)
+2. [Categories](#categories)
+3. [Subject Profiles](#subject-profiles)
 
 ---
 
-## Ranking
+## Quick Picker
 
-| # | Type | % |
-|---|------|---|
-| 1 | Reading | ~22 |
-| 2 | Execution | ~19 |
-| 3 | Conceptual | ~17 |
-| 4 | Procedural | ~15 |
-| 5 | Edge Case | ~12 |
+Run this **decision flow** on each error:
+
+```
+Wrong answer received
+  → Did the student misunderstand what was asked?        YES → C1 Reading
+  → Did the student use a wrong concept/definition?      YES → C2 Conceptual
+  → Did the student apply a method incorrectly?          YES → C3 Procedural
+  → Did the student make a mechanical slip (sign, arithmetic)? YES → C4 Execution
+  → Did the student miss a constraint (domain, boundary)? YES → C5 Edge Case
+  → None of the above                                   → Re-examine
+```
 
 ---
 
 ## Categories
 
-**C1 Conceptual (17%)** — Wrong mental model. Types: Analogy mismatch | Definition conflation | Overgeneralized rule. *Fix:* Verify concept + preconditions
+| ID | Type | Signal Phrase | Prevention |
+|----|------|---------------|------------|
+| C1 | Reading | "Misread the question" | Re-read question 30s; circle key words (NOT, EXCEPT) |
+| C2 | Conceptual | "Wrong idea/model" | Verify definition + preconditions before applying |
+| C3 | Procedural | "Used wrong method" | Checklist steps; verify preconditions for formula |
+| C4 | Execution | "Calculation mistake" | Scan signs first; re-do calculation from error point |
+| C5 | Edge Case | "Missed a special case" | Substitute answer back; check domain/boundary |
 
-**C2 Procedural (15%)** — Applied incorrectly. Types: Precondition violated | Step omission | Wrong substitution. *Fix:* Checklist + count steps
+**Detail by type:**
 
-**C3 Execution (19%)** — Mechanical slips. Types: Sign errors (32%, #1) | Arithmetic | Transcription. *Fix:* Scan signs first + re-do from error
-
-**C4 Reading (**22% — #1**)** — Parse failure. Types: Missed keyword ("NOT") | Wrong quantity | Assumed info. *Fix:* Re-read question (30s)
-
-**C5 Edge Case (12%)** — Violates constraints. Types: Extraneous solution | Domain violation | Boundary ignored. *Fix:* Substitution check mandatory
-
----
-
-## Flowchart
-
-```
-Wrong → Understand? NO→C4 | YES→Concept? NO→C1 | YES→Method? NO→C2 | YES→Execute? NO→C3 | YES→Constraint? YES→C5 | NO→OK
-```
+- **C1 Reading** (most common, ~22%) — Missed keywords (NOT, EXCEPT), wrong quantity, assumed unstated info. *Fix:* Re-read + highlight constraints.
+- **C2 Conceptual** (~17%) — Analogy mismatch, definition conflation, overgeneralized rule. *Fix:* Confirm concept + preconditions first.
+- **C3 Procedural** (~15%) — Precondition violated, step omitted, wrong substitution. *Fix:* Count steps; verify each.
+- **C4 Execution** (~19%) — Sign errors (#1 sub-type), arithmetic, transcription. *Fix:* Sign-scan first; reverse-verify.
+- **C5 Edge Case** (~12%) — Extraneous solution, domain violation, boundary ignored. *Fix:* Substitute back; check domain.
 
 ---
 
-## Profiles
+## Subject Profiles
 
-| Subject | Dominant | Secondary | Traps |
-|---------|----------|-----------|-------|
-| Algebra | C3 | C5 | Radical extraneous; exponents |
-| Calculus | C2 | C1 | L'Hôpital misuse; endpoints |
-| Statistics | C4 | C1 | z vs t; one/two-tailed |
-| Physics | C1 | C4 | F=ma rotation; vectors |
-| Chemistry | C5 | C3 | Limiting reagent; sig figs |
-| CS | C2 | C1 | Off-by-one; null case |
+| Subject | Dominant | Secondary | Top Traps |
+|---------|----------|-----------|-----------|
+| Algebra | C4 Execution | C5 Edge Case | Radical extraneous solutions; exponent sign errors |
+| Calculus | C3 Procedural | C2 Conceptual | L'Hôpital misuse; missing endpoints |
+| Statistics | C1 Reading | C2 Conceptual | z vs t-test; one-tailed vs two-tailed |
+| Physics | C2 Conceptual | C1 Reading | F=ma in rotation; vector components |
+| Chemistry | C5 Edge Case | C4 Execution | Limiting reagent; significant figures |
+| CS | C3 Procedural | C2 Conceptual | Off-by-one; null/empty case |
+
+**Usage tip:** When analyzing a question type, pre-load its dominant category and check those patterns first.

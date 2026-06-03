@@ -4,50 +4,53 @@
 
 ## Contents
 
-1. [Overview Table](#overview-table)
+1. [Quick Picker](#quick-picker)
 2. [Level Definitions](#level-definitions)
-3. [Decision Tree](#decision-tree)
+3. [Tie-Breaker](#tie-breaker)
 
 ---
 
-## Overview Table
+## Quick Picker
 
-| Level | Name | Task | Keywords | % |
-|-------|------|------|---------|---|
-| 1 | Remember | Recall facts | define, list, name | 10-15 |
-| 2 | Understand | Explain meaning | explain, describe | 15-20 |
-| 3 | Apply | Execute procedure | calculate, solve | 25-35 |
-| 4 | Analyze | Break down parts | compare, contrast | 15-25 |
-| 5 | Evaluate | Make judgment | evaluate, critique | 5-15 |
-| 6 | Create | Generate original | design, create | 5-10 |
+Apply the **first** matching rule:
+
+| # | Rule | Level |
+|---|------|-------|
+| 1 | Question asks to recall a fact (define, list, name) | L1 Remember |
+| 2 | Question asks to explain meaning in own words | L2 Understand |
+| 3 | Question provides data and asks to compute/apply a known procedure | L3 Apply |
+| 4 | Question asks to break down, compare, or contrast parts | L4 Analyze |
+| 5 | Question asks to make a judgment using criteria | L5 Evaluate |
+| 6 | Question asks to design, propose, or create something new | L6 Create |
+
+**Scanning heuristic (fast path):**
+- Verb is recall/identify → L1
+- Verb is explain/describe → L2
+- Verb is compute/solve with given formula → L3
+- Verb is analyze/compare/why → L4
+- Verb is evaluate/critique/justify → L5
+- Verb is design/propose/create → L6
 
 ---
 
 ## Level Definitions
 
-**L1 Remember:** Recall without understanding. "What is...", "Name..." | *Ex: State quadratic formula.*
+**L1 Remember** — Recall facts without processing. *Ex: "State the quadratic formula."*
 
-**L2 Understand:** Explain in own words. "Why...", "Describe..." | *Ex: Why dividing by zero undefined.*
+**L2 Understand** — Restate in own words; show grasp of meaning. *Ex: "Why is division by zero undefined?"*
 
-**L3 Apply:** Use procedure in context. "Calculate...", "Solve..." | *Ex: Solve 2x²-5x+3=0.*
+**L3 Apply** — Execute a standard procedure in a new context. *Ex: "Solve 2x² - 5x + 3 = 0."*
 
-**L4 Analyze:** Break down + compare. "Analyze...", "Compare..." | *Ex: Is f(x) increasing on (-1,2)?*
+**L4 Analyze** — Decompose, compare, or find relationships among parts. *Ex: "Is f(x) increasing on (-1, 2)? Justify."*
 
-**L5 Evaluate:** Defend using criteria. "Evaluate...", "Critique..." | *Ex: Evaluate regression validity.*
+**L5 Evaluate** — Defend a position using explicit criteria. *Ex: "Evaluate the validity of this regression model."*
 
-**L6 Create:** Generate original. "Design...", "Propose..." | Requires ALL lower levels. | *Ex: Design experiment for g.*
+**L6 Create** — Generate an original artifact that integrates lower levels. *Ex: "Design an experiment to measure g."*
 
 ---
 
-## Decision Tree
+## Tie-Breaker
 
-```
-Recall WITHOUT processing?     → L1 REMEMBER
-EXPLAIN in OWN WORDS?          → L2 UNDERSTAND
-STANDARD PROCEDURE exists?     → L3 APPLY
-BREAK DOWN & COMPARE?          → L4 ANALYZE
-Make JUDGMENT?                 → L5 EVALUATE
-Generate ORIGINAL?             → L6 CREATE
-```
+When two levels both fit → pick the **higher** level.
 
-**Tie-breaker:** Two levels → pick HIGHEST
+When unclear → default to L3 Apply (most common exam level, ~25-35% of questions).
