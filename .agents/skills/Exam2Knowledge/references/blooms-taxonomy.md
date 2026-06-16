@@ -1,56 +1,55 @@
-# Bloom's Taxonomy Reference
+# Bloom's Taxonomy
 
-6-level cognitive hierarchy for classifying exam questions.
+6-level hierarchy. Load when classifying L1–L6 or checking "hidden intent" depth.
 
-## Contents
+## Levels
 
-1. [Quick Picker](#quick-picker)
-2. [Level Definitions](#level-definitions)
-3. [Tie-Breaker](#tie-breaker)
+| L  | Name       | Verbs                                                     | Example                                |
+| -- | ---------- | --------------------------------------------------------- | -------------------------------------- |
+| L1 | Remember   | recall, identify, list, name, state, define               | "State the quadratic formula."         |
+| L2 | Understand | explain, describe, summarize, paraphrase, classify        | "Why is division by zero undefined?"   |
+| L3 | Apply      | compute, solve, apply, execute, demonstrate, use          | "Solve 2x² - 5x + 3 = 0."             |
+| L4 | Analyze    | analyze, compare, contrast, distinguish, examine          | "Is f(x) increasing on (-1, 2)?"       |
+| L5 | Evaluate   | evaluate, critique, justify, argue, defend, assess        | "Evaluate this regression's validity." |
+| L6 | Create     | design, propose, create, construct, formulate, synthesize | "Design an experiment to measure g."   |
 
----
+**Default:** L3. **Tie:** higher.
 
-## Quick Picker
+## Fuzzy Tie-Breakers
 
-Apply the **first** matching rule:
+| Stem                       | Default | Why               |
+| -------------------------- | ------- | ----------------- |
+| "Show that" / "证明"       | L4      | Logical chain     |
+| "Determine" (method given) | L3      | Prescribed        |
+| "Determine" (no method)    | L4      | Choose method     |
+| "Find" (single)            | L3      | Direct compute    |
+| "Find all" / "求所有"      | L4      | Enumerate + edges |
+| "Compare … and …"        | L4      | Multi-attribute   |
+| "Which is better"          | L5      | Needs criteria    |
+| "Prove or disprove"        | L5      | Defend claim      |
+| "Use … to solve"          | L3      | Tool prescribed   |
+| "If …, then …" (predict) | L4      | Conditional       |
+| "Why" (open)               | L5      | Argument          |
+| "How" (procedure)          | L3      | Procedural        |
+| "How" (mechanism)          | L2      | Explanation       |
 
-| # | Rule | Level |
-|---|------|-------|
-| 1 | Question asks to recall a fact (define, list, name) | L1 Remember |
-| 2 | Question asks to explain meaning in own words | L2 Understand |
-| 3 | Question provides data and asks to compute/apply a known procedure | L3 Apply |
-| 4 | Question asks to break down, compare, or contrast parts | L4 Analyze |
-| 5 | Question asks to make a judgment using criteria | L5 Evaluate |
-| 6 | Question asks to design, propose, or create something new | L6 Create |
+**Trap:** "Discuss" / "论述" sounds L4 but often masks L5 (take a side).
 
-**Scanning heuristic (fast path):**
-- Verb is recall/identify → L1
-- Verb is explain/describe → L2
-- Verb is compute/solve with given formula → L3
-- Verb is analyze/compare/why → L4
-- Verb is evaluate/critique/justify → L5
-- Verb is design/propose/create → L6
+## Chinese Verbs
 
----
+| Verb                               | Level |
+| ---------------------------------- | ----- |
+| 记住、列举、写出、复述             | L1    |
+| 解释、说明、描述、概括             | L2    |
+| 计算、求解、应用、证明(方法已知)   | L3    |
+| 分析、比较、讨论(无立场)           | L4    |
+| 评价、批判、论证、证明(需自选方法) | L5    |
+| 设计、构造、提出、推广             | L6    |
 
-## Level Definitions
+**Rules:** translate first → "说明"=L2 not L3. Bilingual stems: use majority-language list; translated Qs often simplify verbs upward — re-elevate one level. Multi-part: per part; dominant level drives `[***]/[**]`.
 
-**L1 Remember** — Recall facts without processing. *Ex: "State the quadratic formula."*
+## Decision Tree
 
-**L2 Understand** — Restate in own words; show grasp of meaning. *Ex: "Why is division by zero undefined?"*
+`verb → Quick Picker → Tie? → Fuzzy Rules → Still tied? → Higher → Bilingual? → Final L1-L6`
 
-**L3 Apply** — Execute a standard procedure in a new context. *Ex: "Solve 2x² - 5x + 3 = 0."*
-
-**L4 Analyze** — Decompose, compare, or find relationships among parts. *Ex: "Is f(x) increasing on (-1, 2)? Justify."*
-
-**L5 Evaluate** — Defend a position using explicit criteria. *Ex: "Evaluate the validity of this regression model."*
-
-**L6 Create** — Generate an original artifact that integrates lower levels. *Ex: "Design an experiment to measure g."*
-
----
-
-## Tie-Breaker
-
-When two levels both fit → pick the **higher** level.
-
-When unclear → default to L3 Apply (most common exam level, ~25-35% of questions).
+**Output:** record both surface verb and hidden level. They must differ for "deeper" check.

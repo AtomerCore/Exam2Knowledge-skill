@@ -1,6 +1,6 @@
 <h1 align="center">
   🎓 Exam2Knowledge <br/>
-  <sub>(Exam2Knowledge.skill)</sub>
+  <sub>v1.0.0</sub>
 </h1>
 
 <p align="center">
@@ -12,6 +12,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version: 1.0.0" />
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
   <img src="https://img.shields.io/badge/AgentSkills-Standard-green.svg" alt="Agent Skills Standard" />
 </p>
@@ -33,7 +34,8 @@ Transforms exam questions into **structured, exam-focused knowledge systems**. N
 │   └── output-template.md    # Standardized output structure
 └── references/
     ├── blooms-taxonomy.md    # 6-level cognitive hierarchy
-    └── diagnostic-rubric.md  # 5-category error classification
+    ├── diagnostic-rubric.md  # 5-category error classification
+    └── quantified-rubric.md  # Quantified self-check standards
 ```
 
 ## ⚙️ How It Works
@@ -51,8 +53,6 @@ Transforms exam questions into **structured, exam-focused knowledge systems**. N
 |----------|--------|
 | Single question | Full 5-step analysis + solution template |
 | Multiple questions (≥5) | + frequency statistics + clusters |
-| Time pressure (≤7 days) | Output only [***] + template |
-| Time pressure (≤3 days) | Output only [***] + quick reference |
 | Weak spot diagnosis | Strengthen error pattern analysis |
 | Image/OCR input | Verify OCR accuracy first |
 | Humanities subject | Switch to humanities analysis mode |
