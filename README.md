@@ -64,7 +64,7 @@ Transforms exam questions into **structured, exam-focused knowledge systems**. N
 - ✅ **Built-in self-check** — format, content, consistency, boundary verification
 - 📚 **Tiered knowledge** — [***] / [**] / [*] frequency-based ranking
 - 🛡️ **Capability boundaries** — explicit "can do / cannot do" declaration
-- 🌍 **Humanities mode** — specialized handling for non-STEM subjects
+
 
 ## 📥 Supported Input
 
