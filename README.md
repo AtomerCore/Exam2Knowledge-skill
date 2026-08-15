@@ -1,3 +1,5 @@
+
+
 <h1 align="center">
   🎓 Exam2Knowledge <br/>
   <sub>v1.0.0</sub>
@@ -44,7 +46,7 @@ Transforms exam questions into **structured, exam-focused knowledge systems**. N
 2. **Reverse Engineering** — Extract & tier knowledge points ([***] Must-Master to [*] Optional)
 3. **Solution Template** — Build universal steps + decision rules
 4. **Error Pattern Library** — Catalog mistakes by category ([Diagnostic Rubric](.agents/skills/Exam2Knowledge/references/diagnostic-rubric.md))
-5. **Cross-Question Intelligence** — Frequency ranking + clusters + trends (batch mode)
+5. **Cross-Question Intelligence** — Frequency ranking + clusters + trends (batch mode; self-check standards in [Quantified Rubric](.agents/skills/Exam2Knowledge/references/quantified-rubric.md))
 6. **Exam-Ready Output** — Prioritized action framework ([Output Template](.agents/skills/Exam2Knowledge/assets/output-template.md))
 
 ## 🎯 Decision Rules
